@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🔒 Secure Storage</h2>
+    <div>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="welcome-text">
+        Welcome {{name}} 👋
+    </div>
+
+    <p>Upload files securely using AES Encryption.</p>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+       <div class="form-group">
+    <label>Select File</label>
+
+    <div class="file-upload-box">
+        <input type="file" name="file" id="fileInput" required hidden>
+
+        <label for="fileInput" class="custom-file-btn">
+            📂 Choose File
+        </label>
+
+        <span id="fileName" class="file-name">No file chosen</span>
+    </div>
+</div>
+        <button type="submit" class="btn">Upload & Encrypt</button>
+
+    </form>
+
+    <div class="file-list">
+        <h3>Your Uploaded Files</h3>
+
+        {% if files %}
+            {% for f in files %}
+            <div class="file-item">
+                <span>{{f[2]}}</span>
+                <a href="/download/{{f[0]}}">Download</a>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No files uploaded yet.</p>
+        {% endif %}
+    </div>
+
+</div>
+
+</body>
+</html>
+
+   
+    <!-- ✅ Paste Script Here -->
+    <script>
+        const fileInput = document.getElementById("fileInput");
+        const fileName = document.getElementById("fileName");
+
+        fileInput.addEventListener("change", function () {
+            if (fileInput.files.length > 0) {
+                fileName.textContent = fileInput.files[0].name;
+            } else {
+                fileName.textContent = "No file chosen";
+            }
+        });
+    </script>
+
+</body>
+</html>

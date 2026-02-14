@@ -1,0 +1,333 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to right, #141E30, #243B55);
+    color: white;
+}
+
+/* Remove default link style */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00f2fe;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 12px rgba(0, 242, 254, 0.8);
+}
+
+/* Navbar links */
+.navbar a {
+    margin-left: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+.navbar a:hover {
+    background: #00f2fe;
+    color: black;
+    box-shadow: 0px 0px 12px rgba(0, 242, 254, 0.9);
+    transform: scale(1.08);
+}
+
+/* Main container card */
+.container {
+    width: 90%;
+    max-width: 520px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+/* Titles */
+.container h1,
+.container h2 {
+    text-align: center;
+    color: #00f2fe;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 12px rgba(0, 242, 254, 0.7);
+}
+
+.container p {
+    text-align: center;
+    color: #ddd;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Form design */
+.form-group {
+    margin-top: 18px;
+}
+
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+/* Input box style */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+/* Button style */
+.btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    color: black;
+    box-shadow: 0px 0px 15px rgba(0, 242, 254, 0.6);
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ffffff, #00f2fe);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(0, 242, 254, 0.9);
+}
+
+/* Links below form */
+.link {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.link a {
+    color: #00f2fe;
+    font-weight: bold;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* File list section */
+.file-list {
+    margin-top: 25px;
+}
+
+.file-list h3 {
+    text-align: center;
+    color: #00f2fe;
+}
+
+.file-item {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.file-item:hover {
+    transform: scale(1.03);
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.file-item a {
+    color: #00f2fe;
+    font-weight: bold;
+}
+
+.file-item a:hover {
+    color: white;
+}
+
+/* Dashboard Welcome */
+.welcome-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #00f2fe;
+}
+
+/* Custom File Upload Style */
+.file-upload-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.custom-file-btn {
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    transition: 0.3s;
+    box-shadow: 0px 0px 12px rgba(0, 242, 254, 0.6);
+    white-space: nowrap;
+}
+
+.custom-file-btn:hover {
+    background: linear-gradient(to right, #ffffff, #00f2fe);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 242, 254, 0.9);
+}
+
+.file-name {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-upload-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.custom-file-btn {
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px rgba(0, 242, 254, 0.7);
+}
+
+.custom-file-btn:hover {
+    background: linear-gradient(to right, #ffffff, #00f2fe);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(0, 242, 254, 0.9);
+}
+
+.file-name {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 55px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 25px rgba(0, 255, 255, 0.8);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 650px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-btn {
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 16px;
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    color: black;
+    box-shadow: 0px 0px 18px rgba(0, 242, 254, 0.7);
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 0px 30px rgba(0, 242, 254, 0.9);
+}
+
+.hero-btn.outline {
+    background: transparent;
+    border: 2px solid cyan;
+    color: cyan;
+}
+
+.hero-btn.outline:hover {
+    background: cyan;
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #001f3f, #003366);
+    min-height: 100vh;
+}
